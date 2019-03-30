@@ -9,28 +9,34 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public CharacterController controller;
 
+    
     private Vector3 moveDirection;
     public float gravityScale;
+    public bool isFacingRight;
 
     // Start is called before the first frame update
     void Start()
     {
-        //theRB = GetComponent<Rigidbody>();
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
         
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        /* theRB.velocity = new Vector3(Input.GetAxis("Horizontal")* moveSpeed, theRB.velocity.y,Input.GetAxis("Vertical")* moveSpeed);
+        
+         //moveDirection = new Vector3(Input.GetAxis("Horizontal")* moveSpeed, moveDirection.y ,0);
 
-        if(Input.GetButtonDown("Jump"))
-        {
-            theRB.velocity = new Vector3(theRB.velocity.x,jumpForce, theRB.velocity.z);
-        }*/
+       
+        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
+        controller.Move(moveDirection * Time.deltaTime); 
 
-        moveDirection = new Vector3(Input.GetAxis("Horizontal")* moveSpeed, moveDirection.y ,0);
+        //float moveHorizontal = Input.GetAxis("Horizontal");
+ 
+         Vector3 newPosition = new Vector3(Input.GetAxis("Horizontal")* moveSpeed, moveDirection.y ,0);
+         transform.LookAt(newPosition + transform.position);
+         transform.Translate(newPosition * moveSpeed * Time.deltaTime, Space.World);
 
         if(controller.isGrounded)
         {
@@ -38,11 +44,9 @@ public class PlayerController : MonoBehaviour
             {
                 moveDirection.y = jumpForce;
             }
-        }
             
-
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
-        controller.Move(moveDirection * Time.deltaTime);
+        }
 
     }
+    
 }
