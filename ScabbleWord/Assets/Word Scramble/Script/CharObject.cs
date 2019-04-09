@@ -18,24 +18,40 @@ public class CharObject : MonoBehaviour
     public Color selectedColor;
 
     bool isSelected = false;
-    public CharObject Init (char c)
+
+    private WordScramble scramble;
+
+    public CharObject Init (char c, WordScramble ws)
     {
         character = c;
+        scramble = ws;
         text.text = c.ToString();
         gameObject.SetActive(true);
         return this;
     }
+
+    public CharObject Init(char c)
+    {
+        return Init(c, null);
+    }
+
     public void Select()
     {
         isSelected = !isSelected;
 
         image.color = isSelected ? selectedColor : normalColor;
-        if(isSelected)
+        if (isSelected)
         {
-            WordScramble.main.Select(this);
-        }else
+            if (scramble == null)
+                WordScrambleSingleton.main.Select(this);
+            else
+                scramble.Select(this);
+        } else
         {
-           WordScramble.main.UnSelect();
+            if (scramble == null)
+                WordScrambleSingleton.main.UnSelect();
+            else
+                scramble.UnSelect();
         }
     }
 }

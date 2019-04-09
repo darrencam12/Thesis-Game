@@ -2,37 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Word{
-    public string word;
-    [Header("leave empty if you want randmized")]
-    public string desiredRandom;
-    public string GetString()
-    {
-        if(!string.IsNullOrEmpty(desiredRandom))
-        {
-            return desiredRandom;
-        }
-        string result = word;
-        
-        while (result == word)
-        {
-            result = "";
-            List<char> characters = new List<char>(word.ToCharArray());
-            while (characters.Count > 0)
-            {
-                int indexChar = Random.Range(0, characters.Count - 1);
-                result += characters[indexChar];
-
-                characters.RemoveAt(indexChar);
-            }
-        }
-        return result;
-    }
-}
 public class WordScramble : MonoBehaviour
 {
-    public Word[] words;
+    // this is a blank function in the form of a class.
+    // you can create instances of this that trigger other functions.
+    public delegate void OnWordComplete();
+
+    // this is the declaration of the above.
+    public OnWordComplete onWordComplete;
+
+    public Word word;
 
     [Header("UI REFERENCE")]
     public CharObject prefab;
@@ -44,17 +23,11 @@ public class WordScramble : MonoBehaviour
 
     List<CharObject> charObjects = new List<CharObject>();
     CharObject firstSelected;
-    public int currentWord;
-    public static WordScramble main;
 
-    void Awake()
-    {
-        main = this;
-    }
     // Start is called before the first frame update
     void Start()
     {
-        ShowScramble(currentWord);
+        // ShowScramble();
     }
 
     // Update is called once per frame
@@ -65,54 +38,49 @@ public class WordScramble : MonoBehaviour
 
     void RepostionObject()
     {
+        // if no objects, stop.
         if (charObjects.Count == 0)
         {
             return;
         }
-        float center = (charObjects.Count -1) / 2;
+
+        // swap positions with another letter.
+        float center = (charObjects.Count - 1) / 2;
         for (int i = 0; i < charObjects.Count; i++)
         {
-            charObjects[i].rectTransform.anchoredPosition = Vector2.Lerp(charObjects[i].rectTransform.anchoredPosition, new Vector2((i - center)* space, 0), lerpspeed * Time.deltaTime);
+            charObjects[i].rectTransform.anchoredPosition = Vector2.Lerp(charObjects[i].rectTransform.anchoredPosition, new Vector2((i - center) * space, 0), lerpspeed * Time.deltaTime);
             charObjects[i].index = i;
         }
-        
-    }
-    
-    // show a random word to the screen
-    public void ShowScramble()
-    {
-        ShowScramble(Random.Range(0, words.Length - 1));
+
     }
     /*
         show word for collecton with desired index
         param index = index of the elemnt
      */
-    public void ShowScramble(int index)
+    public void ShowScramble()
     {
+        // clear the list and destroy the children of this object.
         charObjects.Clear();
-        foreach(Transform child in container)
+        foreach (Transform child in container)
         {
             Destroy(child.gameObject);
         }
 
-        // WORDS FINISHED
-        if (index > words.Length - 1)
-        {
-            Debug.LogError("index out of range, please enter range between 0-"+ (words.Length -1).ToString());
-            return;
-        }
-        char[] chars = words[index].GetString().ToCharArray();
-        foreach(char c in chars)
+        // Get the word as an array of characters and clone/set up the prefab.
+        char[] chars = word.GetRandomChars();
+        foreach (char c in chars)
         {
             CharObject clone = Instantiate(prefab.gameObject).GetComponent<CharObject>();
-            clone .transform.SetParent(container);
+            clone.transform.SetParent(container);
 
-            charObjects.Add(clone.Init(c));
+            // Inits the character visually and internally and then
+            // adds that same character to the list for checking.
+            charObjects.Add(clone.Init(c, this));
         }
-        currentWord = index;
     }
 
-    public void Swap (int indexA, int indexB)
+    // swap letters and check the word.
+    public void Swap(int indexA, int indexB)
     {
         CharObject tmpA = charObjects[indexA];
 
@@ -124,20 +92,23 @@ public class WordScramble : MonoBehaviour
 
         CheckWord();
     }
-    
 
-    public void Select (CharObject charObject)
+    // calling this function from the button inspector.
+    public void Select(CharObject charObject)
     {
-        if(firstSelected)
+        // if this was selected second, swap it with another letter.
+        if (firstSelected)
         {
             Swap(firstSelected.index, charObject.index);
 
             //unselect
             firstSelected.Select();
             charObject.Select();
-            
-        }else
+
+        }
+        else
         {
+            // if there is no letter selected, this one is first.
             firstSelected = charObject;
         }
     }
@@ -146,6 +117,7 @@ public class WordScramble : MonoBehaviour
     {
         firstSelected = null;
     }
+
     public void CheckWord()
     {
         StartCoroutine(CoCheckWord());
@@ -153,19 +125,23 @@ public class WordScramble : MonoBehaviour
 
     IEnumerator CoCheckWord()
     {
+        // gives the letters a chance to animate.
         yield return new WaitForSeconds(0.5f);
 
-        string word = "";
+        // setting a blank word for later checking.
+        string currentWord = "";
+
+        // combine the letters into a single word.
         foreach (CharObject charObject in charObjects)
         {
-            word += charObject.character;
+            currentWord += charObject.character;
         }
-        if(word == words[currentWord].word)
+
+        if (currentWord == word.word)
         {
-            currentWord++;
-            ShowScramble(currentWord);
-            
+            // whatever the onWordComplete function is made up of, use it.
+            onWordComplete();
         }
-       
+
     }
 }
