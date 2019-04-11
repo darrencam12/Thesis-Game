@@ -11,6 +11,7 @@ using UnityEngine.UI;
     [SerializeField] private Image scrmImg;
 
     public GameObject Bridge;
+    public GameObject Door;
     WordScramble scramble;
 
     private void Awake()
@@ -21,6 +22,7 @@ using UnityEngine.UI;
     void Start()
     {
          Bridge.SetActive(false);
+         Door.SetActive(false);
     }
     private void Update()
     {
@@ -36,6 +38,7 @@ using UnityEngine.UI;
         Debug.Log("Bridge is now visible.");
         scramble.onWordComplete -= OnFinishWord;
         Bridge.SetActive(true);
+        Door.SetActive(false);
         Deactivate();
         gameObject.SetActive(false);
 

@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\WordScramble.cs" />
      <Compile Include="Assets\Scripts\WordScrambleSingleton.cs" />
      <Compile Include="Assets\Scripts\WordTrigger.cs" />
+     <None Include="Assets\Shaders\S_Skybox.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/GitHub/Thesis-Game/Thesis V3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
