@@ -54,7 +54,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CharObject.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Word.cs" />
+     <Compile Include="Assets\Scripts\WordScramble.cs" />
+     <Compile Include="Assets\Scripts\WordScrambleSingleton.cs" />
+     <Compile Include="Assets\Scripts\WordTrigger.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/GitHub/Thesis-Game/Thesis V3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
