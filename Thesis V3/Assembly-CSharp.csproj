@@ -53,13 +53,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CharObject.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Word.cs" />
-     <Compile Include="Assets\Scripts\WordScramble.cs" />
-     <Compile Include="Assets\Scripts\WordScrambleSingleton.cs" />
-     <Compile Include="Assets\Scripts\WordTrigger.cs" />
+     <Compile Include="Assets\Scripts\MovingPlatfroms.cs" />
+     <Compile Include="Assets\Scripts\Player + Camera\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Player + Camera\Player.cs" />
+     <Compile Include="Assets\Scripts\Player + Camera\PlayerAttach.cs" />
+     <Compile Include="Assets\Scripts\Question.cs" />
+     <Compile Include="Assets\Scripts\QuizManager.cs" />
+     <Compile Include="Assets\Scripts\Scrabble\CharObject.cs" />
+     <Compile Include="Assets\Scripts\Scrabble\Word.cs" />
+     <Compile Include="Assets\Scripts\Scrabble\WordScramble.cs" />
+     <Compile Include="Assets\Scripts\Scrabble\WordScrambleSingleton.cs" />
+     <Compile Include="Assets\Scripts\Scrabble\WordTrigger.cs" />
+     <Compile Include="Assets\Scripts\Scrabble\WordTrigger_Door.cs" />
      <None Include="Assets\Shaders\S_Skybox.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/GitHub/Thesis-Game/Thesis V3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
