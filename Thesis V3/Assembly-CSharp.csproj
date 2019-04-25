@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Player + Camera\CameraController.cs" />
      <Compile Include="Assets\Scripts\Player + Camera\Player.cs" />
      <Compile Include="Assets\Scripts\Player + Camera\PlayerAttach.cs" />
+     <Compile Include="Assets\Scripts\Player + Camera\Respawn.cs" />
      <Compile Include="Assets\Scripts\Question.cs" />
      <Compile Include="Assets\Scripts\QuizManager.cs" />
      <Compile Include="Assets\Scripts\Scrabble\CharObject.cs" />
