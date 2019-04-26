@@ -5,8 +5,8 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     // Start is called before the first frame update
-   //public GameObject player;
-  /* [SerializeField] Transform respawnPoint;
+   public GameObject player;
+   [SerializeField] Transform respawnPoint;
 
    void OnTriggerEnter(Collider Col)
    {
@@ -15,18 +15,10 @@ public class Respawn : MonoBehaviour
        //Debug.Log( player.transform.position);
        if(Col.transform.CompareTag("Player"))
        {
-           Debug.Log( respawnPoint.position);
-           Col.transform.position = respawnPoint.position;
+           //Debug.Log( respawnPoint.position);
+           player.transform.position = respawnPoint.transform.position;
        }
-   } */
-     public Vector3 SpawnPoint;
-     
-     void OnTriggerEnter (Collider col)
-     {
-         if     (col.tag == "Player")
-         {
-             col.transform.position = SpawnPoint;
-         }
-     }
+   } 
 
-}
+    
+}   
