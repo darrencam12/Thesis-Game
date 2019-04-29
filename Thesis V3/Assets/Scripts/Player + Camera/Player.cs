@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public Vector3 spawnPosition;
 
     public Transform playerModel;
+    public GameObject groundCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -48,11 +49,11 @@ public class Player : MonoBehaviour
         velocityY += Time.deltaTime * gravity;
 
         Vector3 velocity = transform.forward * speed + Vector3.up * velocityY;
-        // controller.Move (velocity * Time.deltaTime);
-        // if(controller.isGrounded)
-        // {
-        //     velocityY = 0;
-        // }
+        //controller.Move (velocity * Time.deltaTime);
+        //if(controller.isGrounded)
+        {
+            velocityY = 0;
+        }
         if (respawn)
         {
             if (respawnPosition == null)
