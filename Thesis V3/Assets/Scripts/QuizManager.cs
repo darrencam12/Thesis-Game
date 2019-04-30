@@ -95,4 +95,12 @@ public class QuizManager : MonoBehaviour
         }
        
     }
+    
+    void OnTriggerExit(Collider col)
+    {   
+         if(col.CompareTag("Player"))
+        {
+            questionHolder.SetActive (false);
+        }
+    }
 }

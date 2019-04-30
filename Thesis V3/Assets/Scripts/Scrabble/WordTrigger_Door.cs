@@ -58,6 +58,7 @@ public class WordTrigger_Door : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             scrmImg.enabled = false;
+            Deactivate();
         }
     }
 }
