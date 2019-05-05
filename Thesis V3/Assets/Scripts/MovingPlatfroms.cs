@@ -23,10 +23,10 @@ public class MovingPlatfroms : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(paltformActivate == true)
-        {
+        //if(paltformActivate == true)
+        //{
             movingPlatforms.position = Vector3.Lerp(movingPlatforms.position, newPosition,smooth * Time.deltaTime);
-        }
+        //}
     }
     void ChangeTarget()
     {
@@ -47,6 +47,7 @@ public class MovingPlatfroms : MonoBehaviour
                 newPosition = position2.position;
             }
             Invoke("ChangeTarget", resetTime);
-            }
+    }     
+    
         
 }

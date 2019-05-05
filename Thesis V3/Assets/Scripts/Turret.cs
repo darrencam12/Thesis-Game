@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public bool fire;
+    //public bool fire;
     public GameObject bullet;
+    public Transform bulletSpawn;
+    public float fireRate;
+    private float nextFire;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,16 +18,22 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine("Shoot");
+       // StartCoroutine("Shoot");
+       if (Time.time > nextFire)
+       {
+        nextFire = Time.time + fireRate;
+        Instantiate (bullet,bulletSpawn.position, bulletSpawn.rotation);
+       }
+       
     }
 
-    IEnumerator Shoot()
+   /*  IEnumerator Shoot()
     {
         while(fire)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(5f);
             Instantiate(bullet, transform.position, transform.rotation);
         }
         
-    }
+    }*/
 }

@@ -131,7 +131,7 @@ public class playerController : MonoBehaviour
             respawn = true;
             Debug.Log("Respawned");
         }
-        
+     
     }
     
 }

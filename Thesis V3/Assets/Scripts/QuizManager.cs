@@ -21,6 +21,8 @@ public class QuizManager : MonoBehaviour
    private float timeBetweenQuestions = 1f;
 
    public GameObject questionHolder;
+   public GameObject MovingPlatobj;
+   
   void Start()
   {
       // when game starts for the first time they need to be loaded in into a list of unanswered Questions 
@@ -31,6 +33,7 @@ public class QuizManager : MonoBehaviour
 
       SetCurrentQuestion(); */
       questionHolder.SetActive (false);
+      MovingPlatobj.SetActive (false);
   }
   void SetCurrentQuestion()
   {
@@ -59,7 +62,8 @@ public class QuizManager : MonoBehaviour
             Debug.Log("CORRECT!");
             gameObject.SetActive(false);
             questionHolder.SetActive(false);
-            MovingPlatfroms.paltformActivate = true;
+            MovingPlatobj.SetActive (true);
+            //MovingPlatfroms.paltformActivate = true;             
         }else
         {
             Debug.Log("WRONG!");
@@ -75,7 +79,7 @@ public class QuizManager : MonoBehaviour
             Debug.Log("CORRECT!");
             gameObject.SetActive(false);
             questionHolder.SetActive(false);
-            MovingPlatfroms.paltformActivate = true;
+            //MovingPlatfroms.paltformActivate = true;
         }else
         {
             Debug.Log("WRONG!");
