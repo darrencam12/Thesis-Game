@@ -659,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cc0a8a6927e72648af1e467deaa1d77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.41
+      value: 27.47
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cc0a8a6927e72648af1e467deaa1d77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1430,7 +1430,7 @@ MonoBehaviour:
   position1: {fileID: 1410368419}
   position2: {fileID: 1118864360}
   disableOnStart: 0
-  speed: 5
+  speed: 7
   resetTime: 6
 --- !u!4 &383667781
 Transform:
@@ -1854,7 +1854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.800003, y: 17.01, z: -8.5}
+  m_LocalPosition: {x: 38.800003, y: 16.79, z: -8.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5477,7 +5477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866869421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.8, y: 15.6, z: 0}
+  m_LocalPosition: {x: 38.8, y: 15.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1845155251}
