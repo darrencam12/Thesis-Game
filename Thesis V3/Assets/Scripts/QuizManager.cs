@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 
 
-public class QuizManager : MonoBehaviour
+public class QuizManager : Trigger
 {
  //Created an array of Questions that need to be filled in the inspactor
   public Question[] questions;
@@ -21,7 +21,6 @@ public class QuizManager : MonoBehaviour
    private float timeBetweenQuestions = 1f;
 
    public GameObject questionHolder;
-   public GameObject MovingPlatobj;
    
   void Start()
   {
@@ -33,7 +32,6 @@ public class QuizManager : MonoBehaviour
 
       SetCurrentQuestion(); */
       questionHolder.SetActive (false);
-      MovingPlatobj.SetActive (false);
   }
   void SetCurrentQuestion()
   {
@@ -52,41 +50,33 @@ public class QuizManager : MonoBehaviour
       yield return new WaitForSeconds(timeBetweenQuestions);
       gameObject.SetActive(false);
       //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-  } 
-
-  public void UserSelectTrue()
-  {
-    
-        if(currentQuestion.isTrue)
-        {
-            Debug.Log("CORRECT!");
-            gameObject.SetActive(false);
-            questionHolder.SetActive(false);
-            MovingPlatobj.SetActive (true);
-            //MovingPlatfroms.paltformActivate = true;             
-        }else
-        {
-            Debug.Log("WRONG!");
-        }
-
-       // StartCoroutine(transitionToNextQuestion());
-      
   }
-  public void UserSelectFalse()
+
+  public void IsCorrect(bool isCorrect)
+  {
+    if(isCorrect)
     {
-        if(!currentQuestion.isTrue)
-        {
-            Debug.Log("CORRECT!");
-            gameObject.SetActive(false);
-            questionHolder.SetActive(false);
-            //MovingPlatfroms.paltformActivate = true;
-        }else
-        {
-            Debug.Log("WRONG!");
-        }  
-        //StartCoroutine(transitionToNextQuestion());  
+        Debug.Log("CORRECT!");
+        OnCorrect();
     }
-    public void OnTriggerEnter(Collider col)
+    else
+    {
+        Debug.Log("WRONG!");
+    }
+  }
+
+  public override void Activate()
+  {
+
+  }
+
+  public override void Deactivate()
+  {
+      questionHolder.SetActive(false);
+      base.Deactivate();
+  }
+
+    protected override void OnTriggerEnter(Collider col)
     {
         if(col.CompareTag("Player"))
         {
@@ -100,9 +90,9 @@ public class QuizManager : MonoBehaviour
        
     }
     
-    void OnTriggerExit(Collider col)
+    protected override void OnTriggerExit(Collider col)
     {   
-         if(col.CompareTag("Player"))
+        if(col.CompareTag("Player"))
         {
             questionHolder.SetActive (false);
         }

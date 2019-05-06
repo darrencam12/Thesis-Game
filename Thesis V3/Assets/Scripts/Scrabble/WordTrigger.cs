@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 // when you add this script, it will automatically add a WordScramble script as well.
 [RequireComponent(typeof(WordScramble), typeof(BoxCollider))]
- public class WordTrigger : MonoBehaviour
+ public class WordTrigger : Trigger
 {
-
     [SerializeField] private Image scrmImg;
 
-    public GameObject Bridge;
-    //public GameObject Door;
     WordScramble scramble;
 
     private void Awake()
@@ -19,43 +16,25 @@ using UnityEngine.UI;
         scramble = GetComponent<WordScramble>();
         scramble.onWordComplete += OnFinishWord;
     }
-    void Start()
-    {
-         Bridge.SetActive(false);
-         //Door.SetActive(false);
-    }
-    private void Update()
-    {
-        // this is to activate the scarmble
-        /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Activate();
-        }*/
-    }
 
     private void OnFinishWord()
     {
         Debug.Log("Bridge is now visible.");
         scramble.onWordComplete -= OnFinishWord;
-        Bridge.SetActive(true);
-        //Door.SetActive(false);
-        Deactivate();
-        gameObject.SetActive(false);
-
-
-        
+        OnCorrect();
     }
 
-    public void Activate()
+    public override void Activate()
     {
         scramble.ShowScramble();
     }
-    public void Deactivate()
+    public override void Deactivate()
     {
+        base.Deactivate();
         scramble.HideScramble();
     }
 
-    void OnTriggerEnter(Collider col)
+    protected override void OnTriggerEnter(Collider col)
     {
         if(col.CompareTag("Player"))
         {
@@ -63,12 +42,11 @@ using UnityEngine.UI;
             Activate(); 
         }
     }
-    void OnTriggerExit(Collider col)
+    protected override void OnTriggerExit(Collider col)
     {
         if(col.CompareTag("Player"))
         {
             scrmImg.enabled = false;
-            Deactivate();
         }
     }
 }
