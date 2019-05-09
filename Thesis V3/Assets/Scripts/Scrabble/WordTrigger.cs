@@ -22,6 +22,7 @@ using UnityEngine.UI;
         Debug.Log("Bridge is now visible.");
         scramble.onWordComplete -= OnFinishWord;
         OnCorrect();
+        scrmImg.enabled = false;
     }
 
     public override void Activate()

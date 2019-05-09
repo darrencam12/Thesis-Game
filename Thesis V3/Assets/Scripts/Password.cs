@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Password : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Password : MonoBehaviour
     public float floatingSpeed;
     public float maxHeight;
     public float minHeight;
-    public Text passwordText;
+    public TextMeshProUGUI passwordText;
     public GameObject passwordHolder;
     public GameObject floppyDisk;
     // Start is called before the first frame update
