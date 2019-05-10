@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 
 public class CharObject : MonoBehaviour
 {
 
     public char character;
-    public Text text;
+    public TextMeshProUGUI text;
     public Image image;
     public RectTransform rectTransform;
     public int index;

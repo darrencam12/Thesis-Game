@@ -48,6 +48,7 @@ using UnityEngine.UI;
         if(col.CompareTag("Player"))
         {
             scrmImg.enabled = false;
+            scramble.HideScramble();
         }
     }
 }
