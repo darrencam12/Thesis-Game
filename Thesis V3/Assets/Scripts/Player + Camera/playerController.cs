@@ -15,7 +15,7 @@ public class playerController : MonoBehaviour
     public Vector3 respawnPosition;
     public Vector3 spawnPosition;
 
-
+    
     //public Transform groundCheck;
     //public float checkRaidus;
     //public LayerMask whatIsGround;
@@ -44,6 +44,7 @@ public class playerController : MonoBehaviour
         Rb.velocity = new Vector2(moveInput * speed,Rb.velocity.y);
         if(facingRight == false && moveInput > 0)
         {
+            
             Flip();
         }
         else if(facingRight == true && moveInput < 0)
@@ -80,7 +81,7 @@ public class playerController : MonoBehaviour
         {
             Rb.velocity = Vector2.up * jumpForce;
         }
-
+        
         if (respawn)
         {
             if (respawnPosition == null)

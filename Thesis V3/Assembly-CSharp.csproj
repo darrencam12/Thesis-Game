@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\SwitchPlatform.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\UI_scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\UI_scripts\pauseMenu.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Shaders\S_Skybox.shader" />
