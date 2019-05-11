@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    
+    public int time;
 
     void OnTriggerEnter(Collider other)
     {
@@ -18,7 +18,7 @@ public class NextLevel : MonoBehaviour
     }
     IEnumerator changeScene()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(time);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

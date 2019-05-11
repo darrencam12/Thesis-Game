@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 
 public class QuizManager : Trigger
@@ -15,7 +17,7 @@ public class QuizManager : Trigger
   private Question currentQuestion;
 
   [SerializeField]
-  private Text factText;
+  private TextMeshProUGUI factText;
 
    [SerializeField]
    private float timeBetweenQuestions = 1f;
