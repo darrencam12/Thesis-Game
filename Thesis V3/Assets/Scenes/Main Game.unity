@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.7776073
+  m_AspectRatio: 1.7767441
 --- !u!1001 &33533199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ PrefabInstance:
     - target: {fileID: 5297872716070101864, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Question SECOND
+      value: Terminal- Question
       objectReference: {fileID: 0}
     - target: {fileID: 5297872716070101864, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
@@ -403,6 +403,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 340815146}
+    - target: {fileID: 2151835649863350677, guid: 1ac6b1210b2ea674688756862cb5badc,
+        type: 3}
+      propertyPath: questions.Array.data[0].fact
+      value: What was the Word in the second terminal?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ac6b1210b2ea674688756862cb5badc, type: 3}
 --- !u!1001 &34213341
@@ -2563,7 +2568,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (2)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -2879,7 +2884,7 @@ PrefabInstance:
     - target: {fileID: 4348582149153838624, guid: ef2f2cf98bb194e4cbbbf85e458f6b8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4348582149153838624, guid: ef2f2cf98bb194e4cbbbf85e458f6b8b,
         type: 3}
@@ -3097,7 +3102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a7ed88061e4e65c49a646f9d1abe8d3f, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a7ed88061e4e65c49a646f9d1abe8d3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4157,7 +4162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.62, y: 3.35, z: -13.04}
+  m_LocalPosition: {x: 210.4, y: 60.6, z: -13.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4848,7 +4853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5105,7 +5110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6872,7 +6877,7 @@ PrefabInstance:
     - target: {fileID: 4348582149153838624, guid: ef2f2cf98bb194e4cbbbf85e458f6b8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.339998
+      value: -17.79
       objectReference: {fileID: 0}
     - target: {fileID: 4348582149153838624, guid: ef2f2cf98bb194e4cbbbf85e458f6b8b,
         type: 3}
@@ -7826,7 +7831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14535,7 +14540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14561,7 +14566,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (1)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -14757,7 +14762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90828494e76dd61409ebe879cfb952d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.63
+      value: -18.080002
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90828494e76dd61409ebe879cfb952d5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14765,7 +14770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90828494e76dd61409ebe879cfb952d5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90828494e76dd61409ebe879cfb952d5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -15382,7 +15387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1171270310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17946,7 +17951,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (5)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -19343,7 +19348,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (7)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -20613,7 +20618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a7ed88061e4e65c49a646f9d1abe8d3f, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a7ed88061e4e65c49a646f9d1abe8d3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22064,7 +22069,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (3)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -22541,7 +22546,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (4)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -22686,7 +22691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22855,7 +22860,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant (6)
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -23040,7 +23045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24012,7 +24017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24101,7 +24106,7 @@ PrefabInstance:
     - target: {fileID: 5297872716070101864, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - QuestionFIRST
+      value: Terminal- Question
       objectReference: {fileID: 0}
     - target: {fileID: 5297872716070101864, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
@@ -24230,7 +24235,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866925193, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_Name
-      value: Therminal - Bridge Variant
+      value: Terminals - Scramble
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866692777, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -24350,12 +24355,12 @@ PrefabInstance:
     - target: {fileID: 1450679555171051301, guid: a6af30766ff96a9408c2ef6e953f7936,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.619999
+      value: 210.4
       objectReference: {fileID: 0}
     - target: {fileID: 1450679555171051301, guid: a6af30766ff96a9408c2ef6e953f7936,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0500064
+      value: 58.30001
       objectReference: {fileID: 0}
     - target: {fileID: 1450679555171051301, guid: a6af30766ff96a9408c2ef6e953f7936,
         type: 3}
