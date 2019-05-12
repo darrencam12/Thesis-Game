@@ -12,6 +12,8 @@ public class QuizManager : Trigger
 {
  //Created an array of Questions that need to be filled in the inspactor
   public Question[] questions;
+  public GameObject player;
+   [SerializeField] Transform respawnPoint;
   private static List<Question> unansweredQuestions;
 
   private Question currentQuestion;
@@ -65,6 +67,11 @@ public class QuizManager : Trigger
     {
         Debug.Log("WRONG!");
     }
+  }
+
+  public void IsWrong()
+  {
+      player.transform.position = respawnPoint.transform.position;
   }
 
   public override void Activate()

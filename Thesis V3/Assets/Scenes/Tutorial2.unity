@@ -375,7 +375,7 @@ RectTransform:
   - {fileID: 1265370636}
   - {fileID: 362422489}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -466,8 +466,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 195917586}
-        m_MethodName: IsCorrect
-        m_Mode: 6
+        m_MethodName: IsWrong
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -554,6 +554,8 @@ MonoBehaviour:
     isTrue: 1
   - fact: What was the Password
     isTrue: 1
+  player: {fileID: 0}
+  respawnPoint: {fileID: 0}
   factText: {fileID: 0}
   timeBetweenQuestions: 1
   questionHolder: {fileID: 0}
@@ -569,7 +571,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &107426825
 PrefabInstance:
@@ -940,7 +942,7 @@ Transform:
   m_LocalScale: {x: 368.55313, y: 0.54939, z: 18.822}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
@@ -1083,7 +1085,7 @@ PrefabInstance:
     - target: {fileID: 1450679555171051301, guid: a6af30766ff96a9408c2ef6e953f7936,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1450679555171051301, guid: a6af30766ff96a9408c2ef6e953f7936,
         type: 3}
@@ -1117,7 +1119,7 @@ PrefabInstance:
     - target: {fileID: 5297872716069617480, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5499973
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 5297872716069617480, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
@@ -1152,7 +1154,7 @@ PrefabInstance:
     - target: {fileID: 5297872716069617480, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5297872716069617480, guid: 1ac6b1210b2ea674688756862cb5badc,
         type: 3}
@@ -1194,6 +1196,21 @@ PrefabInstance:
       propertyPath: objects.Array.data[0]
       value: 
       objectReference: {fileID: 250146217}
+    - target: {fileID: 2151835649863350677, guid: 1ac6b1210b2ea674688756862cb5badc,
+        type: 3}
+      propertyPath: questions.Array.data[0].fact
+      value: What was the word used in the first terminal?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151835649863350677, guid: 1ac6b1210b2ea674688756862cb5badc,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1315637653}
+    - target: {fileID: 2151835649863350677, guid: 1ac6b1210b2ea674688756862cb5badc,
+        type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 2009385743}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ac6b1210b2ea674688756862cb5badc, type: 3}
 --- !u!114 &195917586 stripped
@@ -1221,7 +1238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cc0a8a6927e72648af1e467deaa1d77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.0199976
+      value: 6.7300005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cc0a8a6927e72648af1e467deaa1d77, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1249,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cc0a8a6927e72648af1e467deaa1d77, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1cc0a8a6927e72648af1e467deaa1d77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1715,7 +1732,7 @@ PrefabInstance:
     - target: {fileID: 1072046921866692777, guid: db6605410d8643d488013496af756bc2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1072046921866692777, guid: db6605410d8643d488013496af756bc2,
         type: 3}
@@ -1850,7 +1867,7 @@ Transform:
   - {fileID: 1999728774}
   - {fileID: 1518334347}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
@@ -1939,7 +1956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
@@ -2270,6 +2287,75 @@ MonoBehaviour:
     type: 3}
   m_TextureBokehShader: {fileID: 4800000, guid: c961b8ed1f00f924d804ada5143bd0e8,
     type: 3}
+--- !u!1001 &545595862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5439383294109889794, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_Name
+      value: CheckPoint (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4787793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b, type: 3}
 --- !u!1001 &641445776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2466,8 +2552,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 195917586}
-        m_MethodName: IsCorrect
-        m_Mode: 6
+        m_MethodName: IsWrong
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3245,7 +3331,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: TRUE
+  m_text: BOOT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f08fbd8ff580e64b800a5c4c80801fb, type: 2}
   m_sharedMaterial: {fileID: -5297748527499492632, guid: 6f08fbd8ff580e64b800a5c4c80801fb,
@@ -3430,8 +3516,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 195917586}
-        m_MethodName: IsCorrect
-        m_Mode: 6
+        m_MethodName: IsWrong
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3644,7 +3730,7 @@ Transform:
   - {fileID: 2009151602}
   - {fileID: 1325987646}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &985786679
 GameObject:
@@ -3802,7 +3888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e03dac21adb2da40b996f35853555fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4032,7 +4118,7 @@ PrefabInstance:
     - target: {fileID: 701856615503946534, guid: 07da31800a82e34499c54323424c5770,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 701856615503946534, guid: 07da31800a82e34499c54323424c5770,
         type: 3}
@@ -4181,7 +4267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1216443022
 PrefabInstance:
@@ -4233,7 +4319,7 @@ PrefabInstance:
     - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
         type: 3}
@@ -4404,6 +4490,12 @@ RectTransform:
   m_AnchoredPosition: {x: -108.01453, y: -96.01242}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1315637653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1450679555171051303, guid: a6af30766ff96a9408c2ef6e953f7936,
+    type: 3}
+  m_PrefabInstance: {fileID: 192874140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1325987645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4775,7 +4867,7 @@ Transform:
   - {fileID: 444515062}
   - {fileID: 1034598843}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1402251792
 GameObject:
@@ -5125,7 +5217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d00768090bf4b5048979940413845fe9, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d00768090bf4b5048979940413845fe9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5622,7 +5714,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: TRUE
+  m_text: BOOL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f08fbd8ff580e64b800a5c4c80801fb, type: 2}
   m_sharedMaterial: {fileID: -5297748527499492632, guid: 6f08fbd8ff580e64b800a5c4c80801fb,
@@ -5843,7 +5935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.85, y: -1.82}
+  m_AnchoredPosition: {x: 12.93, y: -1.82}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580688591
@@ -6377,7 +6469,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: TRUE
+  m_text: TUBE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f08fbd8ff580e64b800a5c4c80801fb, type: 2}
   m_sharedMaterial: {fileID: -5297748527499492632, guid: 6f08fbd8ff580e64b800a5c4c80801fb,
@@ -6759,6 +6851,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!4 &2009385743 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5439383294109889854, guid: 1fc99bf7f5f2d3c43b5d9ecf14aca89b,
+    type: 3}
+  m_PrefabInstance: {fileID: 545595862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080920639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,7 +6914,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: TRUE
+  m_text: BOOTABLE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f08fbd8ff580e64b800a5c4c80801fb, type: 2}
   m_sharedMaterial: {fileID: -5297748527499492632, guid: 6f08fbd8ff580e64b800a5c4c80801fb,

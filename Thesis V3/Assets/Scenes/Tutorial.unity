@@ -8294,6 +8294,16 @@ PrefabInstance:
       propertyPath: space
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 8354493934645698268, guid: db6605410d8643d488013496af756bc2,
+        type: 3}
+      propertyPath: word.word
+      value: BOOT
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354493934645698268, guid: db6605410d8643d488013496af756bc2,
+        type: 3}
+      propertyPath: word.desiredRandom
+      value: OBTO
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6605410d8643d488013496af756bc2, type: 3}
 --- !u!4 &1072046921866692777 stripped
