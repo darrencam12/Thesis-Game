@@ -1625,7 +1625,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: This is a Terminal hover over it to activate it. Your job is to solve the
-    word to activate its features!
+    word to enable its features!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f08fbd8ff580e64b800a5c4c80801fb, type: 2}
   m_sharedMaterial: {fileID: -5297748527499492632, guid: 6f08fbd8ff580e64b800a5c4c80801fb,
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_margin: {x: -11.433996, y: -2.8623886, z: 19.812548, w: 0.1843481}
   m_textInfo:
     textComponent: {fileID: 411620016}
-    characterCount: 104
+    characterCount: 102
     spriteCount: 0
     spaceCount: 20
     wordCount: 21
@@ -11431,8 +11431,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: This is a Mainframe. This will take you to the next level. Stay infront
-    of it for 2 seconds!
+  m_text: This is a Mainframe. This will take you to the next level. Stay in front
+    to go to the next level!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f08fbd8ff580e64b800a5c4c80801fb, type: 2}
   m_sharedMaterial: {fileID: -5297748527499492632, guid: 6f08fbd8ff580e64b800a5c4c80801fb,
@@ -11502,12 +11502,12 @@ MonoBehaviour:
   m_margin: {x: -11.433996, y: -0.23744059, z: 24.044683, w: 0.1843481}
   m_textInfo:
     textComponent: {fileID: 1660492100}
-    characterCount: 92
+    characterCount: 97
     spriteCount: 0
-    spaceCount: 18
-    wordCount: 19
+    spaceCount: 20
+    wordCount: 21
     linkCount: 0
-    lineCount: 6
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
